@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="alert alert-danger" role="alert">
+    You need to log in to access this page.
+    <a href="{{ url_for('login') }}" class="alert-link">Click here to log in.</a>
+  </div>
+{% endblock %}
+
