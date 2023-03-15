@@ -1,28 +1,40 @@
+# Specifies the version of the Docker Compose file format being used
 version: "3.9"
 
+# Defines the services to be run in the application
 services:
   app:
+    # Builds the Docker image for the app service using the Dockerfile in the current directory
     build: .
+    # Maps port 5000 in the container to port 5000 on the host machine
     ports:
       - "5000:5000"
+    # Mounts a volume from the host machine to the container to persist data
     volumes:
       - /home/aminesrr/Schwarzapp/data:/app/data
+    # Specifies the network to use for the app service
     networks:
       - schwarznetwork
+    # Specifies that the app service depends on the db service
     depends_on:
       - db
 
   db:
+    # Uses the official MongoDB image from Docker Hub
     image: mongo
+    # Mounts a volume to persist the MongoDB data
     volumes:
       - mongo-data:/data/db
+    # Specifies the network to use for the db service
     networks:
       - schwarznetwork
 
+# Defines the volumes to be created
 volumes:
   mongo-data:
 
+# Defines the network to be created
 networks:
   schwarznetwork:
-    driver: bridge 
-
+    # Specifies the driver to use for the network
+    driver: bridge
