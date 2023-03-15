@@ -13,9 +13,10 @@ Ask admins to add an account for the moment : amine.serrar@edu.devinci.fr and vi
 
 About the repartition :
 
-App.py --> Amine
-Forms.py --> Amine
-Dockerfile --> Vincent
-docker-compose.yml --> Vincent
-Html file in templates --> Amine & vincent 
-requirements.txt --> Vincent
+App.py --> Amine, 
+Forms.py --> Amine, 
+Dockerfile --> Vincent, 
+docker-compose.yml --> Vincent, 
+HTML file in templates --> Amine & Vincent, 
+requirements.txt --> Vincent 
+
